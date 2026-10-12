@@ -80,6 +80,7 @@ The gateway takes whatever public IP the provider assigns and translates it to p
 | Remote access | By default the app and browser only work on the local network; for outside access, sign up for Home Assistant Cloud (Nabu Casa) |
 | Rachio sprinkler timer | Transfers to the new homeowner via a simple transfer screen in the app |
 | Garage door (myQ) | We assume you've already reset the access — let us know if you need us to transfer anything |
+| WLED app | Controls the WLED addressable-LED devices on the network — Android and iOS, also controllable from each device's local web UI |
 
 ### Internet connection first
 
