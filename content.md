@@ -82,6 +82,13 @@ The gateway takes whatever public IP the provider assigns and translates it to p
 | Garage door (myQ) | We assume you've already reset the access — let us know if you need us to transfer anything |
 | WLED app | Controls the WLED addressable-LED devices on the network — Android and iOS, also controllable from each device's local web UI |
 
+### WLED app setup notes
+
+- The app auto-discovers the shower WLED controller, **WLED SHOWER** (`192.168.13.169`).
+- The hot tub's underwater light controller needs to be added manually on first run, by IP:port — `192.168.13.14:8080`. Once added, it's found and assigned the default name **WLED-Gledopto** (can be renamed).
+- The standard version of the underwater light contains 37 WS2812 LEDs.
+- Full WLED docs: [kno.wled.ge](http://kno.wled.ge)
+
 ### Internet connection first
 
 Transfers can't be done until a working internet connection to the UniFi gateway is established. This is plug and play — no other network configuration is required. Just connect the new modem to the gateway's **WAN port**.
