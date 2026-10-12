@@ -40,59 +40,19 @@ This is a catch-all reference — equipment specs, part numbers, maintenance int
 
 Full manual: [68-0240EFS.pdf](https://digitalassets.resideo.com/damroot/Original/10014/68-0240EFS.pdf)
 
-## Home Network & Handover Notes
+## Existing Modem/Router/AP Combo Unit
 
-**Network:** Ubiquiti UniFi (gateway, switching, access points)
-**Purpose:** Handover reference for the new homeowner
-**Prepared:** October 12, 2026
+**Location:** Networking cabinet, top shelf, left side.
 
-> **Do not rename the SSIDs `CASARIA-CL2` and `CASARIA-24`, and do not change their passkeys.** The configured IoT devices depend on them — either change means reconfiguring every device to keep it operational. Use a separate SSID for personal use.
+**Type:** Combo unit — modem, router, and access point in one.
 
-### Network
+**Connections:**
 
-| Item | Detail |
+| Connection | Detail |
 |---|---|
-| Hardware | All Ubiquiti UniFi — business-grade, fully compatible, managed centrally |
-| Performance | Very high throughput and reliability; easily runs 3 wireless video streams at once, 1500 Mbit and upwards possible |
-| Controller | UniFi Network controller runs on the laptop and is used for configuration |
-| Gateway | White box, ~5 × 5 × 1 in — router and gateway in one, already configured |
-| Access point | UniFi Pro AP on the 2nd floor, covers the whole house and yard |
-
-**Connection chain:**
-
-```
-RG6 coax → cable modem → Ethernet (Cat5) → UniFi gateway WAN port → private LAN IPs
-```
-
-The gateway takes whatever public IP the provider assigns and translates it to private IPs for the home network. Don't replace the UniFi gear with a typical homeowner-style router or gateway.
-
-### Cox / Spectrum modem
-
-- **Modem only:** Ask Cox for a modem-only unit, **or** put the rented combo unit (modem + router + access point) in **bridge mode**.
-- **Why:** Otherwise you get a double NAT, which makes remote access and port forwarding practically impossible and is very tricky to configure.
-
-### Applications
-
-| App | Notes |
-|---|---|
-| Home Assistant | `http://homeassistant.local:8123` or `http://192.168.13.159:8123`, from any browser on the network |
-| Home Assistant Companion app | Highly recommended — Android and iOS, including Apple Watch |
-| Remote access | By default the app and browser only work on the local network; for outside access, sign up for Home Assistant Cloud (Nabu Casa) |
-| Rachio sprinkler timer | Transfers to the new homeowner via a simple transfer screen in the app |
-| Garage door (myQ) | We assume you've already reset the access — let us know if you need us to transfer anything |
-
-### Internet connection first
-
-Transfers can't be done until a working internet connection to the UniFi gateway is established. This is plug and play — no other network configuration is required. Just connect the new modem to the gateway's **WAN port**.
-
-### Modem swap steps
-
-1. **Locate the existing combo unit** (modem, router and access point in one). It has a two-prong AC power cord, an RG6 coax input with an F-type connector, and an Ethernet port.
-2. **Disconnect the power.**
-3. **Remove the RG6 coax connector.**
-4. **Identify the Ethernet patch cable** (note its color; it's Cat5) and unplug it from the existing unit.
-5. **Connect the new cable modem** supplied by the provider: attach the coax, plug in the Ethernet patch cable, and connect power. If it's a combo unit, set it to bridge mode.
-6. **Return the existing unit** to Shelly, our realtor.
+| Power | Two-prong AC power cord |
+| Coax input | RG6 with F-type connector |
+| Ethernet | One Ethernet port |
 
 ## Status
 
